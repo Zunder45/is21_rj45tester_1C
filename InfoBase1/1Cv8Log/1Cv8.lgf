@@ -41,4 +41,8 @@
 {4,"_$InfoBase$_.DBConfigUpdateError",21},
 {4,"_$Data$_.Unpost",22},
 {5,f3f1e38b-047a-451e-8466-a6a2e2dfc930,"",5},
-{5,f3f1e38b-047a-451e-8466-a6a2e2dfc930,"Справочник.ИС21",5}
+{5,f3f1e38b-047a-451e-8466-a6a2e2dfc930,"Справочник.ИС21",5},
+{5,da2d307d-9257-475b-8300-0ddc3c44489e,"",6},
+{5,da2d307d-9257-475b-8300-0ddc3c44489e,"Справочник.Тема",6},
+{4,"_$InfoBase$_.DumpStart",23},
+{4,"_$InfoBase$_.DumpFinish",24}
