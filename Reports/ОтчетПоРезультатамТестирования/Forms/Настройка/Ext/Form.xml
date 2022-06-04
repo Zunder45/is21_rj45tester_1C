@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Customizable>false</Customizable>
+	<Scale>102</Scale>
+	<ReportFormType>Main</ReportFormType>
+	<AutoShowState>Auto</AutoShowState>
+	<ReportResultViewMode>Auto</ReportResultViewMode>
+	<ViewModeApplicationOnSetReportResult>Auto</ViewModeApplicationOnSetReportResult>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="Сформировать" id="1">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Сформировать</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+					<xr:LoadTransparent>false</xr:LoadTransparent>
+				</Picture>
+				<Shape>Usual</Shape>
+				<ExtendedTooltip name="СформироватьРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ОткрытьWebHelp" id="20">
+				<Type>CommandBarHyperlink</Type>
+				<Representation>Picture</Representation>
+				<CommandName>Form.Command.ОткрытьWebHelp</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.Information</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Открыть WebHelp</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ОткрытьWebHelpРасширеннаяПодсказка" id="21"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Группа" id="3">
+			<DataPath>Объект.Группа</DataPath>
+			<TitleLocation>Top</TitleLocation>
+			<ClearButton>true</ClearButton>
+			<ContextMenu name="ГруппаКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ГруппаРасширеннаяПодсказка" id="5"/>
+		</InputField>
+		<InputField name="Студент" id="14">
+			<DataPath>Объект.Студент</DataPath>
+			<TitleLocation>Top</TitleLocation>
+			<ClearButton>true</ClearButton>
+			<ContextMenu name="СтудентКонтекстноеМеню" id="15"/>
+			<ExtendedTooltip name="СтудентРасширеннаяПодсказка" id="16"/>
+			<Events>
+				<Event name="OnChange">СтудентПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Тема" id="6">
+			<DataPath>Объект.Тема</DataPath>
+			<TitleLocation>Top</TitleLocation>
+			<ClearButton>true</ClearButton>
+			<ContextMenu name="ТемаКонтекстноеМеню" id="7"/>
+			<ExtendedTooltip name="ТемаРасширеннаяПодсказка" id="8"/>
+		</InputField>
+		<RadioButtonField name="Практика" id="17">
+			<DataPath>Объект.Практика</DataPath>
+			<RadioButtonType>Tumbler</RadioButtonType>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Все</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Все</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сдана</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Сдана</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Не до конца</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">НеДоКонца</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Несдана</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Несдана</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ПрактикаКонтекстноеМеню" id="18"/>
+			<ExtendedTooltip name="ПрактикаРасширеннаяПодсказка" id="19"/>
+			<Events>
+				<Event name="OnChange">ПрактикаПриИзменении</Event>
+			</Events>
+		</RadioButtonField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ReportObject.ОтчетПоРезультатамТестирования</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Сформировать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Сформировать</Action>
+		</Command>
+		<Command name="ОткрытьWebHelp" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть web help</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть web help</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьWebHelp</Action>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,954 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Scale>105</Scale>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Главная" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Главная</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Главная</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГлавнаяРасширеннаяПодсказка" id="12"/>
+			<ChildItems>
+				<UsualGroup name="Темы" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Темы</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" height="0" kind="StyleItem"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Темы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<ExtendedTooltip name="ТемыРасширеннаяПодсказка" id="14"/>
+					<ChildItems>
+						<Button name="ЗагрузитьТемыПрактических" id="15">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ЗагрузитьТемыПрактических</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.LevelDown</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<ExtendedTooltip name="ЗагрузитьТемыПрактическихРасширеннаяПодсказка" id="16"/>
+						</Button>
+						<Button name="ЗагрузитьТемы" id="19">
+							<Type>Hyperlink</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Form.Command.ВыгрузитьТемыПрактических</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.LevelUp</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<ExtendedTooltip name="ЗагрузитьТемыРасширеннаяПодсказка" id="20"/>
+						</Button>
+						<UsualGroup name="СоздатьТемы" id="71">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Создать темы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Создать темы</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<ExtendedTooltip name="СоздатьТемыРасширеннаяПодсказка" id="72"/>
+							<ChildItems>
+								<Button name="СоздатьНовуюТему" id="75">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.СоздатьНовуюТему</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ExtendedTooltip name="СоздатьНовуюТемуРасширеннаяПодсказка" id="76"/>
+								</Button>
+								<Button name="СоздатьСтандартныеТемы" id="73">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.СоздатьСтандартныеТемы</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ExtendedTooltip name="СоздатьСтандартныеТемыРасширеннаяПодсказка" id="74"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ИнформацияОСтудентах" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Информация о студентах</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" height="0" kind="StyleItem"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Информация о студентах</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<ExtendedTooltip name="ИнформацияОСтудентахРасширеннаяПодсказка" id="6"/>
+					<ChildItems>
+						<Button name="ЗагрузитьСтудентов" id="1">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ЗагрузитьСтудентов</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.LevelDown</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<ExtendedTooltip name="ЗагрузитьСтудентовРасширеннаяПодсказка" id="2"/>
+						</Button>
+						<Button name="ВыгрузитьДанныеСтудентов" id="21">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ВыгрузитьДанныеСтудентов</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.LevelUp</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<ExtendedTooltip name="ВыгрузитьДанныеСтудентовРасширеннаяПодсказка" id="22"/>
+						</Button>
+						<UsualGroup name="СозданиеСтудентов" id="83">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Создание студентов</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Создание студентов</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Usual</Behavior>
+							<ExtendedTooltip name="СозданиеСтудентовРасширеннаяПодсказка" id="84"/>
+							<ChildItems>
+								<Button name="СозданиеСтудентов1" id="85">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.СозданиеСтудентов</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Создать студентов</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СозданиеСтудентов1РасширеннаяПодсказка" id="86"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группы" id="77">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группы</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="style:NormalTextFont" height="0" kind="StyleItem"/>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группы</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<ExtendedTooltip name="ГруппыРасширеннаяПодсказка" id="78"/>
+							<ChildItems>
+								<Button name="ВыгрузитьГруппы" id="23">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ВыгрузитьГруппы</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.LevelUp</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ExtendedTooltip name="ВыгрузитьГруппыРасширеннаяПодсказка" id="24"/>
+								</Button>
+								<Button name="ЗагрузкаГрупп" id="3">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ЗагрузкаГрупп</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.LevelDown</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ExtendedTooltip name="ЗагрузкаГруппРасширеннаяПодсказка" id="4"/>
+								</Button>
+								<UsualGroup name="СозданиеГруппы" id="81">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Создание группы</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Создание группы</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Behavior>Usual</Behavior>
+									<ExtendedTooltip name="СозданиеГруппыРасширеннаяПодсказка" id="82"/>
+									<ChildItems>
+										<Button name="СоздатьГруппу" id="79">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.СоздатьГруппу</CommandName>
+											<Picture>
+												<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<ExtendedTooltip name="СоздатьГруппуРасширеннаяПодсказка" id="80"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="РезультатыСтудентов" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результаты студентов</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" height="0" kind="StyleItem"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результаты студентов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<ExtendedTooltip name="РезультатыСтудентовРасширеннаяПодсказка" id="8"/>
+					<ChildItems>
+						<Button name="ЗагрузитьРезультатыТестирования" id="9">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ЗагрузитьЗаписиТестирования</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.LevelDown</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Загрузить результаты тестирования</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<ExtendedTooltip name="ЗагрузитьРезультатыТестированияРасширеннаяПодсказка" id="10"/>
+						</Button>
+						<Button name="ВыгрузитьРезультатыТестирования" id="17">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ВыгрузитьРезультатыТестирования</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.LevelUp</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<ExtendedTooltip name="ВыгрузитьРезультатыТестированияРасширеннаяПодсказка" id="18"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Константы" id="89">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Константы</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" height="0" kind="StyleItem"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Константы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<ExtendedTooltip name="КонстантыРасширеннаяПодсказка" id="90"/>
+					<ChildItems>
+						<Button name="ОткрытьКонстантуПравильныйРезультат" id="96">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОткрытьКонстантуПравильныйРезультат</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.Constant</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Открыть константу "ПравильныйРезультат"</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ОткрытьКонстантуПравильныйРезультатРасширеннаяПодсказка" id="97"/>
+						</Button>
+						<Button name="ОткрытьГодСозданияКомпетенции" id="102">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОткрытьГодСозданияКомпетенции</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.Constant</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Открыть константу "ГодСозданияКомпетенции"</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ОткрытьГодСозданияКомпетенцииРасширеннаяПодсказка" id="103"/>
+						</Button>
+						<Button name="ОткрытьНаименованиеГруппы" id="100">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОткрытьНаименованиеГруппы</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.Constant</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Открыть константу "НаименованиеГруппы"</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ОткрытьНаименованиеГруппыРасширеннаяПодсказка" id="101"/>
+						</Button>
+						<UsualGroup name="Заполнить" id="98">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Заполнить</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Заполнить</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<ExtendedTooltip name="ЗаполнитьРасширеннаяПодсказка" id="99"/>
+							<ChildItems>
+								<Button name="ЗаполнитьКонстантыСтандартнымиЗначениями" id="91">
+									<Type>Hyperlink</Type>
+									<Width>22</Width>
+									<CommandName>Form.Command.ЗаполнитьКонстантыСтандартнымиЗначениями</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.Constant</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="ЗаполнитьКонстантыСтандартнымиЗначениямиРасширеннаяПодсказка" id="92"/>
+								</Button>
+								<LabelDecoration name="ЗначениеКонстант" id="93">
+									<Font ref="style:NormalTextFont" height="11" bold="false" italic="true" underline="false" strikeout="false" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Значение Констант</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ЗначениеКонстантКонтекстноеМеню" id="94"/>
+									<ExtendedTooltip name="ЗначениеКонстантРасширеннаяПодсказка" id="95"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ПользователиИРоли" id="53">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователи и роли</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" height="0" kind="StyleItem"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователи и роли</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ПользователиИРолиРасширеннаяПодсказка" id="54"/>
+			<ChildItems>
+				<UsualGroup name="ПоляПользователя" id="61">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поля пользователя</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поля пользователя</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ПоляПользователяРасширеннаяПодсказка" id="62"/>
+					<ChildItems>
+						<InputField name="НаименованиеПользователя" id="25">
+							<DataPath>НаименованиеПользователя</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<ContextMenu name="НаименованиеПользователяКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="НаименованиеПользователяРасширеннаяПодсказка" id="27"/>
+						</InputField>
+						<InputField name="Роль" id="63">
+							<DataPath>Роль</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<ContextMenu name="РольКонтекстноеМеню" id="64"/>
+							<ExtendedTooltip name="РольРасширеннаяПодсказка" id="65"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<Button name="Добавить" id="55">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Command.ДобавитьПользователя</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ДобавитьРасширеннаяПодсказка" id="56"/>
+				</Button>
+				<Table name="Пользователи" id="28">
+					<Representation>List</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Пользователи</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ПользователиКонтекстноеМеню" id="29"/>
+					<AutoCommandBar name="ПользователиКоманднаяПанель" id="30">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<Button name="Обновить" id="59">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.Обновить</CommandName>
+								<Picture>
+									<xr:Ref>StdPicture.Reread</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="ОбновитьРасширеннаяПодсказка" id="60"/>
+							</Button>
+							<Button name="Удалить" id="57">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Command.Удалить</CommandName>
+								<Picture>
+									<xr:Ref>StdPicture.Delete</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="УдалитьРасширеннаяПодсказка" id="58"/>
+							</Button>
+							<Button name="ПользователиСоздатьСтандартныхПользователей" id="69">
+								<Type>CommandBarHyperlink</Type>
+								<CommandName>Form.Command.СоздатьСтандартныхПользователей</CommandName>
+								<ExtendedTooltip name="ПользователиСоздатьСтандартныхПользователейРасширеннаяПодсказка" id="70"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ПользователиРасширеннаяПодсказка" id="31"/>
+					<SearchStringAddition name="ПользователиСтрокаПоиска" id="32">
+						<AdditionSource>
+							<Item>Пользователи</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПользователиСтрокаПоискаКонтекстноеМеню" id="33"/>
+						<ExtendedTooltip name="ПользователиСтрокаПоискаРасширеннаяПодсказка" id="34"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ПользователиСостояниеПросмотра" id="35">
+						<AdditionSource>
+							<Item>Пользователи</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПользователиСостояниеПросмотраКонтекстноеМеню" id="36"/>
+						<ExtendedTooltip name="ПользователиСостояниеПросмотраРасширеннаяПодсказка" id="37"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ПользователиУправлениеПоиском" id="38">
+						<AdditionSource>
+							<Item>Пользователи</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ПользователиУправлениеПоискомКонтекстноеМеню" id="39"/>
+						<ExtendedTooltip name="ПользователиУправлениеПоискомРасширеннаяПодсказка" id="40"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="BeforeDeleteRow">ПользователиПередУдалением</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="ПользователиИмя" id="41">
+							<DataPath>Пользователи.Имя</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПользователиИмяКонтекстноеМеню" id="42"/>
+							<ExtendedTooltip name="ПользователиИмяРасширеннаяПодсказка" id="43"/>
+						</InputField>
+						<InputField name="ПользователиРоль" id="66">
+							<DataPath>Пользователи.Роль</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПользователиРольКонтекстноеМеню" id="67"/>
+							<ExtendedTooltip name="ПользователиРольРасширеннаяПодсказка" id="68"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<Button name="ОткрытьWebHelp" id="87">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ОткрытьWebHelp</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.Information</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Открыть WebHelp</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ОткрытьWebHelpРасширеннаяПодсказка" id="88"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ДанныеИС</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="НаименованиеПользователя" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование пользователя</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Пользователи" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Имя" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Роль" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Роль</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Роль" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Роль</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.Роли</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗагрузитьСтудентов" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить студентов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить студентов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьСтудентов</Action>
+		</Command>
+		<Command name="ЗагрузкаГрупп" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузка групп</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузка групп</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузкаГрупп</Action>
+		</Command>
+		<Command name="ЗагрузитьЗаписиТестирования" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить записи тестирования</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить записи тестирования</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьЗаписиТестирования</Action>
+		</Command>
+		<Command name="ЗагрузитьТемыПрактических" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить темы практических</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить темы практических</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьТемыПрактических</Action>
+		</Command>
+		<Command name="ВыгрузитьРезультатыТестирования" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить результаты тестирования</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить результаты тестирования</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьРезультатыТестирования</Action>
+		</Command>
+		<Command name="ВыгрузитьТемыПрактических" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить темы практических</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить темы практических</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрудитьТемыПрактических</Action>
+		</Command>
+		<Command name="ВыгрузитьДанныеСтудентов" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить данные студентов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить данные студентов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьДанныеСтудентов</Action>
+		</Command>
+		<Command name="ВыгрузитьГруппы" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить группы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить группы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьГруппы</Action>
+		</Command>
+		<Command name="ДобавитьПользователя" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить пользователя</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить пользователя</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьПользователя</Action>
+		</Command>
+		<Command name="Удалить" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Удалить</Action>
+		</Command>
+		<Command name="Обновить" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Обновить</Action>
+		</Command>
+		<Command name="СоздатьСтандартныхПользователей" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать стандартных пользователей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать стандартных пользователей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьСтандартныхПользователей</Action>
+		</Command>
+		<Command name="СоздатьСтандартныеТемы" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать стандартные темы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать стандартные темы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьСтандартныеТемы</Action>
+		</Command>
+		<Command name="СоздатьНовуюТему" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать новую тему</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать новую тему</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьНовуюТему</Action>
+		</Command>
+		<Command name="СоздатьГруппу" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать группу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать группу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьГруппу</Action>
+		</Command>
+		<Command name="СозданиеСтудентов" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создание студентов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создание студентов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СозданиеСтудентов</Action>
+		</Command>
+		<Command name="ОткрытьWebHelp" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть web help</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть web help</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьWebHelp</Action>
+		</Command>
+		<Command name="ЗаполнитьКонстантыСтандартнымиЗначениями" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить константы стандартными значениями</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить константы стандартными значениями</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьКонстантыСтандартнымиЗначениями</Action>
+		</Command>
+		<Command name="ОткрытьКонстантуПравильныйРезультат" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть константу правильный результат</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть константу правильный результат</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьКонстантуПравильныйРезультат</Action>
+		</Command>
+		<Command name="ОткрытьНаименованиеГруппы" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть наименование группы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть наименование группы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьНаименованиеГруппы</Action>
+		</Command>
+		<Command name="ОткрытьГодСозданияКомпетенции" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть год создания компетенции</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть год создания компетенции</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьГодСозданияКомпетенции</Action>
+		</Command>
+	</Commands>
+</Form>

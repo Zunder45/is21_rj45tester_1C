@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Студент" id="7">
+			<DataPath>Объект.Студент</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Студент</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<CreateButton>false</CreateButton>
+			<ContextMenu name="СтудентКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="СтудентРасширеннаяПодсказка" id="9"/>
+			<Events>
+				<Event name="OnChange">ФИОСтудентаПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Тема" id="28">
+			<DataPath>Объект.Тема</DataPath>
+			<ContextMenu name="ТемаКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="ТемаРасширеннаяПодсказка" id="30"/>
+		</InputField>
+		<InputField name="Группа" id="10">
+			<DataPath>Объект.Группа</DataPath>
+			<Enabled>false</Enabled>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ГруппаКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ГруппаРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<UsualGroup name="Группа2" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат тестирования</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" height="16" kind="StyleItem"/>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="27"/>
+			<ChildItems>
+				<Button name="ПерваяПара" id="16">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ПерваяПара</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>12</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ПерваяПараРасширеннаяПодсказка" id="17"/>
+				</Button>
+				<Button name="ВтораяПара" id="18">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ВтораяПара</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>34</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ВтораяПараРасширеннаяПодсказка" id="19"/>
+				</Button>
+				<Button name="ТретьяПара" id="22">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ТретьяПара</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>56</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ТретьяПараРасширеннаяПодсказка" id="23"/>
+				</Button>
+				<Button name="ЧетвертаяПара" id="24">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ЧетвертаяПара</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>78</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ЧетвертаяПараРасширеннаяПодсказка" id="25"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.Тестирование</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПерваяПара" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Первая пара</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Первая пара</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПерваяПара</Action>
+		</Command>
+		<Command name="ВтораяПара" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вторая пара</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вторая пара</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВтораяПара</Action>
+		</Command>
+		<Command name="ТретьяПара" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Третья пара</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Третья пара</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТретьяПара</Action>
+		</Command>
+		<Command name="ЧетвертаяПара" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Четвертая пара</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Четвертая пара</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЧетвертаяПара</Action>
+		</Command>
+	</Commands>
+</Form>
