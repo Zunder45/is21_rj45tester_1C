@@ -3,7 +3,7 @@
 
 [is21_rj45tester arduino](https://github.com/Zunder45/is21_rj45tester)
 
-[Ссылка на ссайт: 88.205.135.82:7071/testerRJ45/](88.205.135.82:7071/testerRJ45/)
+[Cайт](http://88.205.135.82:7071/testerRJ45/)
 
 # Скриншоты
 
